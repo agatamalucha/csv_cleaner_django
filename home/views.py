@@ -40,31 +40,25 @@ def home(request):
         dataset_vaccination = dataset_vaccination.groupby(["country", "year week"])["first dose"].agg([sum])
 
         # Creating new column that containd indexes data
-        dataset_vaccination["country"] = dataset_vaccination.reset_index(inplace=True)
+        dataset_vaccination.reset_index(inplace=True)
 
-        print(dataset_vaccination.index)
-        # # Creating new columns date and country  with 1st and 2nd element of index column
-        # dataset_vaccination["date"] = dataset_vaccination["country"].str[1]
-        # dataset_vaccination["country"] = dataset_vaccination["country"].str[0]
-        #
-        # # Reseting index
-        # dataset_vaccination = dataset_vaccination.reset_index(drop=True)
-        #
-        # #
-        # dataset_vaccination['date'] = dataset_vaccination['date'].str.replace("W", "")
-        #
-        # dataset_vaccination["date"] = dataset_vaccination["date"].apply(lambda x: datetime.datetime.strptime(x + '-1', "%Y-%W-%w"))
-        #
-        # dataset_vaccination["date"] = dataset_vaccination["date"].astype(str).str.split(" ").str[0]
+        # Renaming column
+        dataset_vaccination = dataset_vaccination.rename(columns={"year week": "date"})
 
+        dataset_vaccination['date'] = dataset_vaccination['date'].str.replace("W", "")
+        dataset_vaccination["date"] = dataset_vaccination["date"].apply(lambda x: datetime.datetime.strptime(x + '-1', "%Y-%W-%w"))
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename=download.csv'
         dataset_vaccination.to_csv(path_or_buf=response, float_format='%.2f', index=False,)
+
         return response
-        #new_message = str(dataset.columns)
-        # return render(request, "home.html", {"new_message": new_message}, )
+
     return render(request, "home.html", )
 
 
 def dashboard(request):
     return render(request, "dashboard.html", )
+
+
+def my_page(request):
+    return render(request, "my_page.html", )

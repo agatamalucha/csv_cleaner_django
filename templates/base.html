@@ -43,11 +43,27 @@
   <nav class="navbar navbar-default top-navbar" role="navigation">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <img src="{% static 'img/tenerife-icon.jpg' %}" alt="Tenerife" class="img-logo">
-        <span style=""> Holiday Planner</span>
+         <i class="material-icons">computer</i>
       </a>
     </div>
+    <ul class="nav navbar-top-links navbar-right">
+        <li><span><a class="nav-link" href="/dashboard">Dashborad </a></span>
+        </li>
+        <li><span><a class="nav-link" href="/my_page">My page </a></span>
+        </li>
+             <li><span><a class="nav-link" href="">New</a></span>
+        </li>
+         <li><span><a class="nav-link" href="">New</a></span>
+        </li>
+      <li>
+          <form method="post" action="">
+            {% csrf_token %}
+            <span><button class="nav-button">Logout</button></span>
+          </form>
+        </li>
 
+
+    </ul>
   </nav>
 
   {% endblock %}
