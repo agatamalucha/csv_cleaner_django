@@ -2,6 +2,19 @@
 
 {% block content %}
 
+<div id="page-index">
+    <div class="dashboard-cards">
+<div class="row plain-element">
+    <div class="col s12 m12 l4 plain-element" id="chart">
+        <div  class="col s12 m12 l12 ">
+            <br><br><br>
+            <div class=" dashboard-element">
+        <h5 id="chart">This is dashboard
+        </h5>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m12 l8 plain-element" id="chart">
         <div class='tableauPlaceholder' id='viz1626007791269' style='position: relative'>
             <noscript><a href='#'><img alt='Top 10 Vaccinated '
                                        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccination_16242985908750&#47;Top10Vaccinated&#47;1_rss.png'
@@ -23,14 +36,19 @@
                 <param name='language' value='en-US'/>
             </object>
         </div>
-        <script type='text/javascript'>
+    </div>
+</div>
+    </div>
+</div>
+<script type='text/javascript'>
             var divElement = document.getElementById('viz1626007791269');
             var vizElement = divElement.getElementsByTagName('object')[0];
             vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
             var scriptElement = document.createElement('script');
             scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
+
+</script>
 
 
 {% endblock %}

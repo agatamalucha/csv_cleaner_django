@@ -13,7 +13,7 @@
 	margin-top: 0px;
 	font-weight: 400;
 	display: block;
-	color: #333333;
+	color: #de8d1b
 }
 
 .top-navbar {
@@ -35,7 +35,7 @@
 }
 
 .navbar-brand .material-icons {
-	color: #1a2026;
+	color: #de8d1b;
 }
 
 
@@ -51,7 +51,7 @@
 	text-align: left;
 	padding: 0px;
 	font-weight: 500;
-	color: #333333;
+	color: #de8d1b;
 	background: transparent;
 	text-transform: uppercase;
 }
@@ -70,7 +70,7 @@
 	height: 32px;
 	line-height: 32px;
 	top: 2px;
-	color: #333333;
+	color: #de8d1b;
 }
 
 .navbar-header:hover,
