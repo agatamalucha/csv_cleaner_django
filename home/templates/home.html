@@ -7,7 +7,7 @@
     <div class="dashboard-cards">
         <br>
         <div class="row element">
-            <div class="col s12 m12 l2 plain-element">
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 plain-element">
                 <a target="_blank" class="btn btn-submit waves-effect waves-light"
                    href="{% static 'datasets/test.txt' %}" download>
                     <div class="row plain-element">
@@ -18,7 +18,7 @@
         </div>
         <br>
         <div class="row plain-element">
-            <div class="col s12 m12 l3 plain-element" id="activeTrendsColumn">
+            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 plain-element">
                 <div class="row bordered">
                     <div class="card card-side">
                         <div class="section-heading">
@@ -30,15 +30,13 @@
                             <div class="row plain-element left-align">
                                 <div class="file-field input-field csv-field">
                                     <div class="btn btn-file">
-                                        <span>File:</span>
+                                        <span style="float:left;">File:</span>
 
                                         <input type="file" name="csv_file" id="csv_file" accept=".csv"
                                                required="True"
                                                class="form-control">
                                     </div>
-                                    <div class="file-path-wrapper">
-                                        <input class="file-path validate csv-input" type="text">
-                                    </div>
+
                                 </div>
                             </div>
                             <br>
