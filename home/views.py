@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 import pandas as pd
 import numpy as np
 import datetime
 
-
+@login_required
 def home(request):
     if request.method == "POST":
         csv_file = request.FILES["csv_file"]

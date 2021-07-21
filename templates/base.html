@@ -57,7 +57,7 @@
          <li><span><a class="nav-link" href="">New</a></span>
         </li>
       <li>
-          <form method="post" action="">
+          <form method="post" action="{% url 'account_logout' %}">
             {% csrf_token %}
             <span><button class="nav-button">Logout</button></span>
           </form>
